@@ -5,8 +5,9 @@
   "license": "MIT",
   "repository": "xxhomey19/infinite-array",
   "version": "0.1.0",
+  "main": "lib/index.js",
   "files": [
-    "lib/index.js"
+    "lib"
   ],
   "scripts": {
     "build": "npm run clean && babel index.js -d lib --ignore '**/*.spec.js'",
