@@ -1,0 +1,7 @@
+{
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "rules": {
+    "quotemark": [true, "single"],
+    "no-var-requires": false
+  }
+}

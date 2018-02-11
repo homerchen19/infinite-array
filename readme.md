@@ -2,6 +2,8 @@
 
 Inspired by [sindresorhus/negative-array](https://github.com/sindresorhus/negative-array), `infinite-array` supports index which is negative, positive and even bigger than array's length.
 
+**Support TypeScript recently.**
+
 ## Install
 
 ```
@@ -11,7 +13,7 @@ $ npm install infinite-array
 ## Usage
 
 ```js
-const infiniteArray = require('infinite-array');
+import infiniteArray from 'infinite-array';
 
 const nba = infiniteArray(['N', 'B', 'A']);
 
