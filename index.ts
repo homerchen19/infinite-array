@@ -1,15 +1,15 @@
-const infiniteArray = input => {
+const infiniteArray = (input: any[]) => {
   if (!Array.isArray(input)) {
     throw new TypeError('Expected an array');
   }
 
   return new Proxy(input, {
-    get(target, name, receiver) {
+    get(target: any[], name: PropertyKey, receiver: any): any {
       if (typeof name !== 'string') {
         return Reflect.get(target, name, receiver);
       }
 
-      let index = Number(name);
+      let index: number = Number(name);
 
       if (Number.isNaN(index)) {
         return Reflect.get(target, name, receiver);
@@ -25,12 +25,12 @@ const infiniteArray = input => {
 
       return target[index];
     },
-    set(target, name, value, receiver) {
+    set(target: any[], name: PropertyKey, value: any, receiver: any): boolean {
       if (typeof name !== 'string') {
         return Reflect.set(target, name, value, receiver);
       }
 
-      const index = Number(name);
+      const index: number = Number(name);
 
       if (Number.isNaN(index)) {
         return Reflect.set(target, name, value, receiver);
@@ -51,4 +51,4 @@ const infiniteArray = input => {
   });
 };
 
-module.exports = infiniteArray;
+export default infiniteArray;

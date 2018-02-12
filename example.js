@@ -1,4 +1,4 @@
-const infiniteArray = require('./lib');
+const infiniteArray = require('./lib').default;
 
 const nba = infiniteArray(['N', 'B', 'A']);
 
