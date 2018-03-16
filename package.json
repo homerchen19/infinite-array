@@ -10,7 +10,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "npm run clean && tsc",
+    "build": "npm run clean && npm run tsc",
     "clean": "rimraf lib",
     "precommit": "lint-staged",
     "lint": "tslint index.ts",
@@ -19,7 +19,8 @@
     "test": "npm run lint:fix && npm run testonly:cov",
     "testonly": "NODE_ENV=test jest",
     "testonly:cov": "jest --coverage --runInBand --forceExit --no-cache",
-    "testonly:watch": "jest --watch"
+    "testonly:watch": "jest --watch",
+    "tsc": "tsc"
   },
   "devDependencies": {
     "@types/jest": "^22.1.2",
@@ -71,5 +72,5 @@
       "git add"
     ]
   },
-  "types": "lib/index.d.js"
+  "types": "lib/index.d.ts"
 }
